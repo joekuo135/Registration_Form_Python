@@ -1,0 +1,68 @@
+body *{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: top;
+}
+.container{
+    width: 505px;
+    height:350px;
+    background-color: lightcyan;
+}
+h2{
+    vertical-align: top;
+    padding-top: 15px;
+    margin-left: 30px;
+}
+.registform, .result-page{
+    /* margin-right: 30px; */
+    /* text-align: right; */
+}
+.result-page{
+    margin: 10px 0 0 30px;;
+    text-align: left;
+}
+.registform p{
+    vertical-align: top;
+    display: inline-block;
+    margin: 20px 0 0 30px;
+}
+#submitbtn1{
+    display: inline-block;
+    vertical-align: top;
+    margin:30px 0 0 30px;
+}
+.footer{
+    width: 100%;
+    vertical-align: top;
+    display: inline-block;
+}
+.resetform2{
+    display: inline-block;
+    vertical-align: top;
+}
+.resetbtn2{
+    vertical-align: top;
+    margin: 30px 0 0 30px;
+    width: 118.09px;
+}
+
+.alertmessage{
+    vertical-align: top;
+    display: inline-block;
+    font-size: 12px;
+    color: red;
+    margin-left: 40px;
+}
+#btn{
+    vertical-align: top;
+    margin: 150px 0 0 30px;
+}
+#box1{
+    vertical-align: top;
+    width: 200px;
+    height: 16px;
+
+}

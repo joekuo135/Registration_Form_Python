@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename ='css/style_form.css') }}"> 
+    <title>Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form class="registform" action="/process" method="post">
+            <p>First name:<br> <input id="box1" type="text" name='firstname' value='{{session['firstname']}}'></p>
+            <p>Last Name:<br> <input id="box1" type="text" name='lastname' value='{{session['lastname']}}'></p>
+            <p>Email:<br> <input id="box1" type="text" name='email' value='{{session['email']}}'></p>
+            <p>Date of Birth:<br> <input id="box1" type="date" name='dob' value='{{session['dob']}}'></p>
+            <p>Password:<br> <input id="box1" type="text" name='password' value='{{session['password']}}'></p>
+            <p>Confirm-Password:<br> <input id="box1" type="text" name='confirmation' value='{{session['confirmpw']}}'></p><br>
+            <input id="submitbtn1" type="submit" value="Submit Registration">
+        </form>
+        <div class="footer">
+            <form class="resetform2" action="/reset">
+            <input class="resetbtn2" type="submit" value="Reset Form">
+            </form>
+            <div class="alertmessage">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                        <p id=alert>{{message}}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            <!-- {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <ul class=flashes>
+                        {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+            {% endwith %} -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

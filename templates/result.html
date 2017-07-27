@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename ='css/style_form.css') }}"> 
+    <title>Registration Completed</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Submmited Info</h2>
+        <div class="result-page">
+            <p>Email: {{session['email']}}</p>
+            <p>First Name:{{session['firstname']}}</p>
+            <p>Last Name: {{session['lastname']}} </p>
+            <p>Date of Birth: {{session['dob']}} </p>
+        </div>
+        <form action="/reset">
+            <input id=btn type="submit" value="Return">
+        </form>
+    </div>
+</body>
+</html>
